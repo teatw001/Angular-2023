@@ -6,9 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent {
-  value: string = '';
+  message: string = '';
 
-  search(): void {
-    console.log(this.value);
+  search(event:any): void {
+    console.log(event);
+    this.message = event.target.message.value
+    console.log(event.target.message.value);
+  }
+  clickSearch ():void{
+    console.log("Bạn đang tìm kiếm");
+
   }
 }
