@@ -7,11 +7,11 @@ import { Component } from '@angular/core';
 })
 export class SearchComponent {
   message: string = '';
+  today: number = Date.now();
 
-  search(event:any): void {
-    console.log(event);
-    this.message = event.target.message.value
-    console.log(event.target.message.value);
+  search(): void {
+    console.log(this.message);
+
   }
   clickSearch ():void{
     console.log("Bạn đang tìm kiếm");

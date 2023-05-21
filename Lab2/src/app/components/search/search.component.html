@@ -1,17 +1,12 @@
-
 <div class="row g-0 mt-3 p-2">
-  <div class=" d-flex align-items-end ">
-    <form (ngSubmit)="search($event)" class="col-12 d-flex  w-100">
-      <input
-        [(ngModel)]="message"
-        type="text"
-        name="message"
-        id=""
-        class="form-control me-1 w-100"
-        placeholder=""
-      />
-      <button (click)="clickSearch()" type="submit" class="btn btn-outline-primary">Button</button>
+  <div class="d-flex align-items-end">
+    <form (ngSubmit)="search()" class="col-12 d-flex w-100">
+      <input [(ngModel)]="message" type="search" name="message" id="" class="form-control me-1 w-100" placeholder="" />
+      <button type="submit" class="btn btn-outline-primary">Button</button>
     </form>
   </div>
-  <div><p class="text-light">Bạn đang tìm kiếm {{message}}</p></div>
+  <div>
+    <p class="text-light">Bạn đang tìm kiếm: {{message | uppercase}}</p>
+
+  </div>
 </div>
